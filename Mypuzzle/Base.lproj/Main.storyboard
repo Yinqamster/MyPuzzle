@@ -1,26 +1,302 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="6fh-vj-c5p">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="0K1-UY-pXw">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6fh-vj-c5p" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ax0-fC-iRh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="z45-4D-Soh" kind="relationship" relationship="rootViewController" id="3ao-71-0o0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sup-JL-ARN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-442" y="-1470"/>
+        </scene>
+        <!--请选择拼图模式-->
+        <scene sceneID="Rwu-NK-0k6">
+            <objects>
+                <viewController id="z45-4D-Soh" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="IIG-1y-uF6"/>
+                        <viewControllerLayoutGuide type="bottom" id="mgm-A9-XKG"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="C7d-nZ-vdL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gun-Hg-6JF">
+                                <rect key="frame" x="117" y="271" width="142" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="移动模式">
+                                            <attributes>
+                                                <font key="NSFont" size="30" name=".PingFangSC-Regular"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="Mi8-WF-n9e" kind="modal" id="5f7-E9-Vgj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0zk-Wi-IvF">
+                                <rect key="frame" x="115" y="405" width="144" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="旋转模式">
+                                            <attributes>
+                                                <font key="NSFont" size="30" name=".PingFangSC-Regular"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="MdV-lx-LKo" kind="modal" id="Zuj-OP-KCT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="制作人：臧凤云，银琦" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3o-4D-l4L">
+                                <rect key="frame" x="103" y="604" width="174" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZKo-cT-gFX">
+                                <rect key="frame" x="117" y="159" width="146" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="自由模式">
+                                            <attributes>
+                                                <font key="NSFont" size="30" name=".PingFangSC-Regular"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="2sz-9B-52a" kind="modal" id="Jg9-bP-o6A"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="请选择拼图模式" id="lSe-ge-wn5"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YDK-WM-bUS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="58.5" y="-1442.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3bg-i5-P73">
+            <objects>
+                <navigationController id="2sz-9B-52a" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KER-h0-8pY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7YM-EV-imH" kind="relationship" relationship="rootViewController" id="8Cc-eh-gLk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bLx-zh-JP5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="599" y="-1443"/>
+        </scene>
+        <!--Puzzle1-->
+        <scene sceneID="Iqb-HC-Hkl">
+            <objects>
+                <viewController id="7YM-EV-imH" customClass="Puzzle1ViewController" customModule="Mypuzzle" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SkO-Ob-dmu"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Ba-yK-0ng"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pcW-bN-PrD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2.5" minValue="2.5" maxValue="5.5" translatesAutoresizingMaskIntoConstraints="NO" id="Sqj-t0-v32">
+                                <rect key="frame" x="14" y="72" width="347" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="changedifficult:" destination="7YM-EV-imH" eventType="valueChanged" id="BYP-3g-va8"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Puzzle1" id="Myw-Av-5TR">
+                        <barButtonItem key="leftBarButtonItem" title="返回" id="LCw-SY-NVa">
+                            <connections>
+                                <segue destination="z45-4D-Soh" kind="modal" id="1nJ-me-61P"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="refresh" id="oCm-Tv-KHr">
+                                <connections>
+                                    <action selector="reOrderImage:" destination="7YM-EV-imH" id="H9N-JD-CYE"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="camera" id="Anu-kM-Cx9">
+                                <connections>
+                                    <action selector="btnClick:" destination="7YM-EV-imH" id="Gy6-uG-wqL"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yiy-84-Peq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1180.5" y="-1443.5"/>
+        </scene>
+        <!--Puzzle2-->
+        <scene sceneID="kYp-KH-eXm">
+            <objects>
+                <viewController id="6s1-rp-8Qc" customClass="Puzzle2ViewController" customModule="Mypuzzle" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fS8-kL-cnr"/>
+                        <viewControllerLayoutGuide type="bottom" id="iJh-HV-U8O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j6Q-GP-2Wd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2.5" minValue="2.5" maxValue="5.5" translatesAutoresizingMaskIntoConstraints="NO" id="6B9-gu-s4E">
+                                <rect key="frame" x="14" y="72" width="347" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="changedifficult:" destination="6s1-rp-8Qc" eventType="valueChanged" id="AJm-4d-Qr4"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Puzzle2" id="Btg-Cj-UMA">
+                        <barButtonItem key="leftBarButtonItem" title="返回" id="FVb-Iv-dNJ">
+                            <connections>
+                                <segue destination="z45-4D-Soh" kind="modal" id="LsH-MS-o0a"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="refresh" id="T8C-bo-HxV">
+                                <connections>
+                                    <action selector="reOrderImage:" destination="6s1-rp-8Qc" id="nvp-PE-9zo"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="camera" id="npu-Pb-W5h">
+                                <connections>
+                                    <action selector="btnClick:" destination="6s1-rp-8Qc" id="Z2T-Od-DDy"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MXJ-pe-xom" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1180.5" y="-597.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="J62-z5-xNG">
+            <objects>
+                <navigationController id="MdV-lx-LKo" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0wU-51-YK8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="WoZ-Xh-C0E" kind="relationship" relationship="rootViewController" id="Nkf-VI-LMu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lKS-bE-xAP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="599" y="397"/>
+        </scene>
+        <!--Puzzle3-->
+        <scene sceneID="ArH-GA-5q7">
+            <objects>
+                <viewController id="WoZ-Xh-C0E" customClass="Puzzle3ViewController" customModule="Mypuzzle" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e5D-8j-oeW"/>
+                        <viewControllerLayoutGuide type="bottom" id="3QV-Hp-ezj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LLf-QY-Roa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2.5" minValue="2.5" maxValue="5.5" translatesAutoresizingMaskIntoConstraints="NO" id="oGc-Tf-jah">
+                                <rect key="frame" x="14" y="72" width="347" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="changedifficult:" destination="WoZ-Xh-C0E" eventType="valueChanged" id="bdQ-qL-15l"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Puzzle3" id="ost-gA-PcT">
+                        <barButtonItem key="leftBarButtonItem" title="返回" id="kCz-eR-lZ6">
+                            <connections>
+                                <segue destination="z45-4D-Soh" kind="modal" id="Dci-PN-LDz"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="refresh" id="uc5-ja-b4i">
+                                <connections>
+                                    <action selector="reOrderImage:" destination="WoZ-Xh-C0E" id="WEd-GB-LeQ"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="camera" id="Nau-bh-AdE">
+                                <connections>
+                                    <action selector="bunClick:" destination="WoZ-Xh-C0E" id="bAj-xy-6Vd"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ado-4H-FZI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1201.5" y="396.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YVS-GY-DHB">
+            <objects>
+                <navigationController id="Mi8-WF-n9e" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="y1A-Mr-Ggr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6s1-rp-8Qc" kind="relationship" relationship="rootViewController" id="rd0-QO-YLJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hV4-eu-Kaa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="599" y="-596"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="Dci-PN-LDz"/>
+    </inferredMetricsTieBreakers>
 </document>
